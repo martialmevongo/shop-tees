@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // je recupère les valeurs de vêtement et leurs tailles
     $vetement = $_POST['vetement'];
     $taille = $_POST['taille'];
+    $quantité = $_POST['quantité'];
 
     // Afficher les choix de l'utilisateur
     echo "<h1>Merci pour votre choix !</h1>";

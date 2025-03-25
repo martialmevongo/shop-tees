@@ -26,6 +26,8 @@
             <option value="XL">XL</option>
             <option value="XXL">XXL</option>
         </select><br><br>
+        <label for="quantite">choissisez une quantité</label>
+        <input type="number" name="quantite" id="quantite" min="1" max="100" value="1" required>
     
         <input type="submit" value="Envoyer">
     </form>
