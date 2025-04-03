@@ -1,21 +1,25 @@
 <?php
-// je recupère le fichier create view
-require_once('../view/create-view.php');
 
-//je créé une function qui recupère le valeurs une fois qu'elles sont envoyées
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // je recupère les valeurs de vêtement et leurs tailles
-    $vetement = $_POST['vetement'];
-    $taille = $_POST['taille'];
-    $quantité = $_POST['quantité'];
+require_once('../config.php');
+require_once('../model/product.repository.php');
+require_once('../model/order.repository.php');
 
-    // Afficher les choix de l'utilisateur
-    echo "<h1>Merci pour votre choix !</h1>";
-    echo "<p>Vous avez choisi un <strong>" . htmlspecialchars($vetement) . "</strong> en taille <strong>" . htmlspecialchars($taille) . "</strong>.</p>";
-} else {
-    echo "<p>Il n'y a pas de données soumises.</p>";
+session_start();
+
+if (array_key_exists("quantity", $_POST) && 
+	array_key_exists("product", $_POST))
+{
+	$order = createOrder($_POST['product'], $_POST['quantity']);
+	saveOrder($order);
 }
 
+$orderByUser = findOrderByUser();
 
-//je recupère le fichier view config
-require_once('../view/config.php');
+require_once('../view/create-order.view.php');
+
+// le controleur : 
+
+// récupère les données de requête (GET, POST etc etc)
+// appelle le(s) répository pour récupérer les données (bdd, session)
+// créé des variables / fonctions etc, pour simplifier l'utilisation des données dans la view
+// renvoie une réponse contenant le HTML généré par la view
