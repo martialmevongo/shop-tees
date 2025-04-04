@@ -8,11 +8,11 @@ function findOrderByUser() {
 		return null;
 	}
 }
-//la function createOrder permet de créer un tableau de $product et un tableau de $quantity dans la session 
+//la function createOrder permet de créer une commande dans la session avec à l'interieur une liste $product, un selectif $quantity  et une new dateTime
+// à ce tableau on ajoute un message si la quantity de la commande est < 0 ou supérieur à 3
+//les
 
 function createOrder($product, $quantity) {
-
-// à ce tableau on ajoute un message si la quantity de la commande est < 0 ou supérieur à 3
 
     if ($quantity < 0) {
         throw new Exception("message: Interdiction de mettre une quantité de commande inferieur à 0");
@@ -24,7 +24,8 @@ function createOrder($product, $quantity) {
         $order = [
     	    "product" => $product,
 			"quantity" => $quantity,
-            "createDate"  => new DateTime()
+            "createDate"  => new DateTime(),
+			"statut" => "CART"
     	];
 	
 	    return $order;

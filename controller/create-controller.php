@@ -14,7 +14,7 @@ if (array_key_exists("quantity", $_POST) &&
 	// on recupère le message avec try/catch pour l'afficher en cas d'erreur
 	try {
 	$order = createOrder($_POST['product'], $_POST['quantity']);
-        saveOrder(order);
+        saveOrder($order);
 	} catch(Exception $e) {
 	    $message = $e ->getMessage();
 	   }

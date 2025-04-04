@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
+<?php
+require_once('../view/partial/_header.view.php')
+?>
 <body>
 
 	<header>
@@ -25,6 +28,7 @@
 		<?php if ($orderByUser) {?>
 			<p>Vous avez une commande en attente : <?php echo $orderByUser['product']; ?> <?php echo $orderByUser['quantity']; ?>
 			<p>Créé le <?php echo $orderByUser['createDate']->format('y-m-d'); ?></p>
+			<p>Votre commande est en statut :<?php echo $orderByUser['statut']; ?> </p>
 		<?php } ?>
 
 		<form method="POST" >
