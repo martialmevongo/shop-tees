@@ -11,17 +11,19 @@ class order {
     public $createdAt;
     // la propriéte status
     public $status;
+    
+    //je recupère la call $order et je créé un objet que $order
+    //En ajoutant chaque propriété de mon objet $order, je viens lui déclarer une valeur
+    $order = new Order();
+
+    $order->product = "Teeshirt Mario";
+    $order->quantity = 1;
+    $order->cratedAt = new dateTime();
+    $order->status = "CART";
 }
 
 
-//je recupère la call $order et je créé un objet que $order
-//En ajoutant chaque propriété de mon objet $order, je viens lui déclarer une valeur
-$order = new Order();
 
-$order->product = "Teeshirt Mario";
-$order->quantity = 1;
-$order->createdAt = new dateTime();
-$order->status = "CART";
 
 
 
