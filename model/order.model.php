@@ -11,5 +11,5 @@ class order {
     public $createdAt
     // la propriéte status
     public $status
-}
+};
 
