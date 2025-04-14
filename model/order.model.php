@@ -20,7 +20,7 @@ $order = new Order();
 
 $order->product = "Teeshirt Mario";
 $order->quantity = "1"
-$order->cratedAt = "new dateTime"
+$order->createdAt = "new dateTime"
 $order->status = "CART"
 
 
