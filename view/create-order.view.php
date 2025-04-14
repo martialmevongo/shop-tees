@@ -10,17 +10,6 @@ require_once('../view/partial/_header.view.php')
 ?>
 <body>
 
-	<header>
-
-		<nav>
-			<ul>
-				<li>Créer une commande</li>
-			</ul>
-		</nav>
-
-	</header>
-
-
 	<main>
     
 	<p><?php echo $message; ?></p>

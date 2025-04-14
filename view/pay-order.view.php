@@ -10,13 +10,7 @@
  require_once('../view/partial/_header.view.php')
  ?>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>créer une commande</li>
-            </ul>
-        </nav>
-    </header>
+    
     <main>
         <h1>Payer une commande</h1>
         <?php if ($orderByUser) {?>

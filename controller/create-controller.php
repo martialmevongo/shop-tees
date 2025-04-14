@@ -4,6 +4,7 @@ require_once('../config.php');
 require_once('../model/product.repository.php');
 require_once('../model/order.repository.php');
 
+
 session_start();
 
 $message = "";
@@ -23,6 +24,7 @@ if (array_key_exists("quantity", $_POST) &&
 
 
 $orderByUser = findOrderByUser();
+
 
 require_once('../view/create-order.view.php');
 

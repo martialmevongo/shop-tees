@@ -11,6 +11,8 @@
             <ul>
                 <li><a href="http://localhost/shop-tees/controller/create-controller.php">Faire une commande</a></li>
                 <li><a href="http://localhost/shop-tees/controller/pay-order.controller.php">Pyer votre commande</a></li>
+                <li><a href="http://localhost/shop-tees/controller/cancel-order.controller.php">Annuler la commande</a></li>
+                <li><a href="http://localhost/shop-tees/controller/create-ShipOrder.controller.php">Envoyez une commande</a></li>
             </ul>
         </nav>
     </header>
