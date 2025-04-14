@@ -19,9 +19,9 @@ class order {
 $order = new Order();
 
 $order->product = "Teeshirt Mario";
-$order->quantity = "1"
-$order->createdAt = "new dateTime"
-$order->status = "CART"
+$order->quantity = 1;
+$order->createdAt = new dateTime();
+$order->status = "CART";
 
 
 
